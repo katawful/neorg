@@ -1279,42 +1279,42 @@ module.config.public = {
                 enabled = true,
                 icon = "◉",
                 highlight = "NeorgHeading1",
-                query = "(heading1_prefix) @icon",
+                query = "[ (heading1_prefix) (link_target_heading1) ] @icon",
             },
 
             level_2 = {
                 enabled = true,
                 icon = " ◎",
                 highlight = "NeorgHeading2",
-                query = "(heading2_prefix) @icon",
+                query = "[ (heading2_prefix) (link_target_heading2) ] @icon",
             },
 
             level_3 = {
                 enabled = true,
                 icon = "  ○",
                 highlight = "NeorgHeading3",
-                query = "(heading3_prefix) @icon",
+                query = "[ (heading3_prefix) (link_target_heading3) ] @icon",
             },
 
             level_4 = {
                 enabled = true,
                 icon = "   ✺",
                 highlight = "NeorgHeading4",
-                query = "(heading4_prefix) @icon",
+                query = "[ (heading4_prefix) (link_target_heading4) ] @icon",
             },
 
             level_5 = {
                 enabled = true,
                 icon = "    ▶",
                 highlight = "NeorgHeading5",
-                query = "(heading5_prefix) @icon",
+                query = "[ (heading5_prefix) (link_target_heading5) ] @icon",
             },
 
             level_6 = {
                 enabled = true,
                 icon = "     ⤷",
                 highlight = "NeorgHeading6",
-                query = "(heading6_prefix) @icon",
+                query = "[ (heading6_prefix) (link_target_heading6) ] @icon",
                 render = function(self, text)
                     return {
                         {
@@ -1330,7 +1330,7 @@ module.config.public = {
             enabled = true,
             icon = "",
             highlight = "NeorgMarker",
-            query = "(marker_prefix) @icon",
+            query = "[ (marker_prefix) (link_target_marker) ] @icon",
         },
 
         definition = {
@@ -1340,7 +1340,7 @@ module.config.public = {
                 enabled = true,
                 icon = "≡",
                 highlight = "NeorgDefinition",
-                query = "(single_definition_prefix) @icon",
+                query = "[ (single_definition_prefix) (link_target_definition) ] @icon",
             },
             multi_prefix = {
                 enabled = true,
@@ -1363,7 +1363,7 @@ module.config.public = {
                 enabled = true,
                 icon = "⁎",
                 highlight = "NeorgFootnote",
-                query = "(single_footnote_prefix) @icon",
+                query = "[ (single_footnote_prefix) (link_target_footnote) ] @icon",
             },
             multi_prefix = {
                 enabled = true,
@@ -1476,7 +1476,7 @@ module.config.public = {
         },
     },
 
-    -- Markup presets to use (currents: `safe`, `brave`)
+    -- Markup presets to use (currents: `safe`, `brave`, `dimmed`)
     -- `safe` will use whitespaces to conceal markup
     -- `brave` will use the word joiner unicode
     -- `dimmed` will dim markup icons instead of concealing them
